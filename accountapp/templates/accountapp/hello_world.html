@@ -15,10 +15,11 @@
 
     function send_input() {
         axios.post('/accounts/hello_world/', {
-            firstName: 'Fred',
+            input_data: document.getElementById('input_data').value,
           })
           .then(function (response) {
             console.log(response);
+            document.getElementById('text').innerHTML = response.data['message'];
           })
           .catch(function (error) {
             console.log(error);
