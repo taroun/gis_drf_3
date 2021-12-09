@@ -6,11 +6,24 @@
     <title>Title</title>
 </head>
 <body>
-
+    <input id="input_data" type="text">
+    <input value="제출" type="button" onclick="send_input()">
     <h1 id="text">Hello World!</h1>
 
 </body>
 <script>
+
+    function send_input() {
+        axios.post('/accounts/hello_world/', {
+            firstName: 'Fred',
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    }
     axios.get('/accounts/hello_world/')
       .then(function (response) {
         // handle success
