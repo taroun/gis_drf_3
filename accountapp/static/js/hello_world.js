@@ -6,7 +6,13 @@ function send_input() {
             // POST 요청이 성공 했을 경우
             console.log(response);
             document.getElementById('text').innerHTML = response.data['text'];
-            document.getElementById('new_model_created_at').innerHTML = response.data['created_at'];
+            document.getElementById('new_model_created_at').innerHTML
+                = response.data['created_at'];
+
+            document.getElementById('new_model_list').innerHTML
+                += "<h5>" + response.data['text'] + "</h5>"
+            document.getElementById('new_model_list').innerHTML
+                += "<p>" + response.data['created_at'] + "</p>"
         })
         .catch(function (error) {
             console.log(error);
