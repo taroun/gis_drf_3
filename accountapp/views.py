@@ -32,3 +32,8 @@ def hello_world(request):
 
     return Response(serializer.data)
 
+
+def AccountCreateTemplate(request):
+    return render(request, 'accountapp/create.html')
+
+
