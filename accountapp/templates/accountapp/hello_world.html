@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
     <input id="input_data" type="text">
     <input value="제출" type="button" onclick="send_input()">
     <h1 id="text">Hello World!</h1>
 
-</body>
 <script>
 
     function send_input() {
@@ -40,4 +34,5 @@
         // always executed
       });
 </script>
-</html>
+
+{% endblock %}
