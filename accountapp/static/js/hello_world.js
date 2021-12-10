@@ -4,7 +4,8 @@
           })
           .then(function (response) {
             console.log(response);
-            document.getElementById('text').innerHTML = response.data['message'];
+            document.getElementById('text').innerHTML = response.data['text'];
+            document.getElementById('new_model_created_at').innerHTML = response.data['created_at'];
           })
           .catch(function (error) {
             console.log(error);
