@@ -14,10 +14,11 @@ from accountapp.models import NewModel
 from accountapp.serializers import NewModelSerializer, UserSerializer, UserWithoutPasswordSerializer
 
 
+# UI 설정부분
 def hello_world_template(request):
     return render(request, 'accountapp/hello_world.html')
 
-
+# 로직 처리부분
 @api_view(['GET', 'POST'])
 def hello_world(request):
 
@@ -53,7 +54,7 @@ def AccountLoginView(request):
     return render(request, 'accountapp/login.html')
 
 
-class AccountRetrieveTemplate(TemplateView):
+class AccountRetrieveTemplateView(TemplateView):
     template_name = 'accountapp/retrieve.html'
 
 
