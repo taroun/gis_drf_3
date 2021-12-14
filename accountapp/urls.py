@@ -22,7 +22,7 @@ urlpatterns = [
 
 
     path('create_template/', AccountCreateTemplate, name='create_template'),
-    path('create/', AccountCreateAPIView.as_view(), name='create'),
+    path('', AccountCreateAPIView.as_view(), name='create'),
 
     path('retrieve_template/<int:pk>', AccountRetrieveTemplateView.as_view(), name='retrieve_template'),
     path('update_template/<int:pk>', AccountUpdateTemplateView.as_view(), name='update_template'),
