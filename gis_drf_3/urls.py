@@ -1,4 +1,4 @@
-"""gis_drf_3 URL Configuration
+"""gis_drf_2 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -23,4 +23,5 @@ urlpatterns = [
 
     path('accounts/', include('accountapp.urls')),
     path('profiles/', include('profileapp.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
