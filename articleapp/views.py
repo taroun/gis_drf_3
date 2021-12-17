@@ -45,7 +45,6 @@ class ArticleRUDAPIView(RetrieveUpdateDestroyAPIView):
     permission_classes = [IsArticleOwner]
     authentication_classes = [TokenAuthentication]
 
-
     def get(self, request, *args, **kwargs):
         target_article = self.get_object()
         serializer = self.get_serializer(target_article)
@@ -58,3 +57,7 @@ class ArticleRUDAPIView(RetrieveUpdateDestroyAPIView):
             result_dict['is_page_owner'] = 'False'
 
         return Response(result_dict)
+
+
+class MagicGridTemplateView(TemplateView):
+    template_name = 'articleapp/magic_grid.html'
