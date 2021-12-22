@@ -17,6 +17,10 @@ class ArticleCreateTemplateView(TemplateView):
     template_name = 'articleapp/create.html'
 
 
+class ArticleListTemplateView(TemplateView):
+    template_name = 'articleapp/list.html'
+
+
 class ArticleListAPIView(ListAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
@@ -68,6 +72,3 @@ class ArticleRUDAPIView(RetrieveUpdateDestroyAPIView):
 
         return Response(result_dict)
 
-
-class MagicGridTemplateView(TemplateView):
-    template_name = 'articleapp/magic_grid.html'
