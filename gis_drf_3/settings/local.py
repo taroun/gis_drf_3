@@ -33,5 +33,5 @@ DATABASES = {
     }
 }
 
-CELERY_BROKER_URL = "amqp://guest@3.142.142.37:5672"
+CELERY_BROKER_URL = "amqp://guest@3.15.184.165:5672"
 
