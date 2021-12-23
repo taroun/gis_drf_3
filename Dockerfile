@@ -2,14 +2,14 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
+RUN echo 'ay'
+
 RUN git clone https://github.com/taroun/gis_drf_3.git
 
 WORKDIR /home/gis_drf_3/
 
 RUN pip install -r requirements.txt
-
 RUN pip install gunicorn
-
 RUN pip install mysqlclient
 
 EXPOSE 8000
