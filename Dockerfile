@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo 'ay'
+RUN echo 'a546gvgy'
 
 RUN git clone https://github.com/taroun/gis_drf_3.git
 
